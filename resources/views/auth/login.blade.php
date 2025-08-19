@@ -59,7 +59,7 @@
 
         <form action="{{ route('login') }}" method="POST">
             @csrf
-            //This code is for customize validation error message
+            {{-- This code is for customize validation error message --}}
             @if(session('error'))
                 <div class="alert alert-danger">
                     {{ session('error') }}
@@ -69,7 +69,7 @@
             <div class="form-group mb-1">
                 <label for="emailaddress" class="form-label">Email address</label>
                 <input class="form-control" type="email" name="email" id="email" required placeholder="Enter your email">
-                //This code is for customize validation error message
+                {{-- This code is for customize validation error message --}}
                 @error('email')
                     <small class="text-danger">{{ $message}}</small>
                 @enderror
@@ -78,7 +78,7 @@
             <div class="form-group mb-1">
                 <label for="password" class="form-label">Password</label>
                 <input class="form-control" type="password" name="password" id="password" required placeholder="Enter your password">
-                //This code is for customize validation error message
+                {{-- This code is for customize validation error message --}}
                 @error('password')
                     <small class="text-danger">{{ $message}}</small>
                 @enderror
