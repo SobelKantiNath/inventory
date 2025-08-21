@@ -28,5 +28,4 @@ Route::middleware('auth')->group(function () {
 
     Route::post('/profile/store', [AdminController::class, 'ProfileStore'])->name('profile.store');
 
-
 });
